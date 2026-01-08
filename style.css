@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #dcecff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FULL SCREEN LAYOUT */
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: none;   /* <-- this hides all screens */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.screen.active {
+  display: flex;   /* <-- only active screen shows */
+}
+
+
+button {
+  width: 250px;
+  height: 65px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#question {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#options .row {
+  display: flex;
+  gap: 25px;
+}
+
+#options button {
+  width: 200px;
+  height: 90px;
+  font-size: 32px;
+}
+
+#status {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#counter,
+#timer {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -10px;
+}
