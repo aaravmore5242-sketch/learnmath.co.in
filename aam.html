@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu" class="screen active">
+  <h1>🧮 Math Game</h1>
+  <button onclick="selectOperation('add')">Addition</button>
+  <button onclick="selectOperation('sub')">Subtraction</button>
+  <button onclick="selectOperation('mul')">Multiplication</button>
+  <button onclick="selectOperation('div')">Division</button>
+</div>
+
+<div id="levels" class="screen">
+  <h1>Select Level</h1>
+  <button onclick="startGame(1)">Easy</button>
+  <button onclick="startGame(2)">Medium</button>
+  <button onclick="startGame(3)">Hard</button>
+  <button onclick="showScreen('menu')">Back</button>
+</div>
+
+<div id="game" class="screen">
+  <h1 id="question"></h1>
+
+  <div id="options">
+    <div class="row">
+      <button onclick="checkOption(this)"></button>
+      <button onclick="checkOption(this)"></button>
+    </div>
+    <div class="row">
+      <button onclick="checkOption(this)"></button>
+      <button onclick="checkOption(this)"></button>
+    </div>
+  </div>
+
+  <p id="status"></p>
+  <p id="counter"></p>
+  <p id="timer"></p>
+</div>
+
+<div id="result" class="screen">
+  <h1 id="finalMsg"></h1>
+  <h2 id="finalScore"></h2>
+  <h2 id="finalPercent"></h2>
+  <h2 id="finalRank"></h2>
+  <button onclick="showScreen('menu')">Home</button>
+</div>
+
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
